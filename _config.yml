@@ -1,5 +1,5 @@
 # markdown: redcarpet
-baseurl: /daskalakismanos
+baseUrl: /daskalakismanos
 
 permalink: pretty
 exclude: ['README.md']
