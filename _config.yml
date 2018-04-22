@@ -1,0 +1,42 @@
+# markdown: redcarpet
+# baseurl: /daskalakismanos
+
+permalink: pretty
+exclude: ['README.md']
+
+author: Daskalakis Manos
+description: Personal site of filmaker Daskalakis Manos.
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-redirect-from
+
+defaults:
+  - scope:
+      path: ""
+      type: shooting
+    values:
+      layout: content
+  - scope:
+      path: ""
+      type: music
+    values:
+      layout: content
+  - scope:
+      path: ""
+      type: photographs
+    values:
+      layout: content
+
+collections:
+  shooting:
+    output: true
+    permalink: /:collection/:path/
+  music:
+    output: true
+    permalink: /:collection/:path/
+  photographs:
+    output: true
+    permalink: /:collection/:path/

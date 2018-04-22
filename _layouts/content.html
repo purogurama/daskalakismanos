@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<div class="kalimma"></div>
+<div class="row">
+  <div class="col-md-4">
+    <!-- TODO:make it more generic -->
+    {% if page.url contains "photographs" %}
+      {% include list-subcategories.html %}
+    {% else %}
+      {% include list-contents.html %}
+    {% endif %}
+  </div>
+  <div class="col-md-8">
+    <!-- <div data-spy="affix" data-offset-top="110"> -->
+    {% for media in page.media %} 
+    {% if forloop.index == 1 %}
+        <div class="lola" data-spy="affix" data-offset-top="95">
+        <div class="first-media" >
+    {% endif %}
+    {% if forloop.index == 2 %}
+        <!-- <div class="rest-media"> -->
+        <div class="rest-media" data-scroll-speed="20">
+    {% endif %}
+      {% case media.source %}
+        {% when "youtube" %}
+
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{media.uid}}?showinfo=0&color=white&rel=0"></iframe>
+            </div>
+            <br>
+          {% if page.externalLink %}
+            <div class="external-link">
+                <a class="back-arrow" href="{{page.externalLink.url}}" target="_blank">
+                    {{page.externalLink.text}} <i class="fa fa-external-link" aria-hidden="true"></i>
+                </a>
+            </div>
+          {% endif %}
+        </div>
+        <!-- <br><small>{{page.description}}</small> -->
+        <!-- <br><br>{{ content }} -->
+        {% when "bandcamp" %}
+          <!-- <iframe style="border: 0; width: 500px; height: 620px;" src="https://bandcamp.com/EmbeddedPlayer/{{ media.uid }}/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless></iframe> -->
+
+<div style="max-width: 700px;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 100%;"><iframe src="https://bandcamp.com/EmbeddedPlayer/{{ media.uid }}/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no"></iframe></div></div>
+
+
+
+        {% when "image" %}
+<!-- <img src="/assets/photos/{{ media.uid }}" class="img-responsive"> -->
+          <img src="{{ media.uid }}" class="img-responsive">
+          <br><small>{{page.description}}</small>
+          {% if page.externalLink %}
+            <div class="external-link">
+                <a class="back-arrow" href="{{page.externalLink.url}}" target="_blank">
+                    {{page.externalLink.text}} <i class="fa fa-external-link" aria-hidden="true"></i>
+                </a>
+            </div>
+          {% endif %}
+          <br><br>{{ content }}
+        {% when "images" %}
+          {% assign a = "photos/collections/" | append: media.uid %}
+          {% for image in media.images %}
+              <a href="http://res.cloudinary.com/dc5qotzae/image/upload/{{image.uid}}" class="gallery-demo" data-caption="{{image.caption}}">
+                  <div class="col-xs-3 img-preview" style="background-image: url('http://res.cloudinary.com/dc5qotzae/image/upload/w_100,h_100,c_crop/v1/{{image.uid}}');"></div>
+                  <!-- <div class="col-xs-3 img-preview" style="background-image: url('{{ site.baseurl }}{{ image.path }}');"></div> -->
+              </a>
+              <!-- <a href="http://imgsv.imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-140mmf_35-56g_ed_vr/img/sample/sample1_l.jpg" class="gallery-demo"> -->
+                <!-- <img src="http://imgsv.imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-140mmf_35-56g_ed_vr/img/sample/sample1_l.jpg"> -->
+              <!-- <div class="col-md-3 img-preview" style="background-image: url('http://imgsv.imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-140mmf_35-56g_ed_vr/img/sample/sample1_l.jpg');"> -->
+              <!-- </div> -->
+              <!-- </a> -->
+          {% endfor %}
+                      {% if forloop.index == 1 %}
+                         </div>
+                        {% endif %}
+      {% endcase %}
+
+    {% if forloop.index == 1 %}
+    <div class="content-info-bottom"></div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- </div> -->
+</div>
+<!-- rest media -->
+</div>

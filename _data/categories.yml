@@ -1,0 +1,42 @@
+- name: Shooting
+  uri:  shooting
+  subcategories:
+    - name: Film
+      uri:  film
+      sortBy: date
+    - name: Television
+      uri:  television
+      sortBy: tags
+    - name: Documentary
+      uri:  documentary
+      sortBy: date
+    - name: Street Art
+      uri:  street-art
+      sortBy: date
+    - name: Other
+      uri:  other
+      sortBy: tags
+- name: Music
+  uri:  music
+  subcategories:
+    - name: Pirates City
+      uri:  pirates-city
+    - name: Personal Projects
+      uri:  personal-projects
+    - name: Yellow Blooms
+      uri:  yellow-blooms
+    - name: The Drones
+      uri:  the-drones
+- name: Photographs
+  uri:  photographs
+  subcategories:
+    - name: Islands
+      uri:  islands
+    - name: Sounds & Spirits
+      uri:  sounds-and-spirits
+    - name: Scenes
+      uri:  scenes
+    - name: Urban
+      uri:  urban
+- name: Bio
+  uri:  bio

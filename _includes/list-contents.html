@@ -1,0 +1,89 @@
+{% assign explodedUrl = page.url | split: "/" %}
+
+{% if page.layout == "content" %}
+  {% assign categoryPosition = 3 %}
+  {% assign subcategoryPosition = 2 %}
+  <div class="content-info" data-spy="affix" data-offset-top="95">
+    <div class="content-info__body" >
+      <div class="content-info__title">
+        {{ page.title }}
+      </div>
+      <div class="content-info__details">
+        {% if page.dateFormat %}
+        <div>
+          {{ page.date | date: page.dateFormat }}
+        </div>
+        {% endif %}
+        {% if page.tags %}
+        <div>
+          {{ page.tags | join: ", " }} 
+        </div>
+        {% endif %}
+        {% if page.duration %}
+        <div>
+          {{ page.duration }} min
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="content-info__fader"></div>
+  </div>
+{% else %}
+  {% assign categoryPosition = 2 %}
+  {% assign subcategoryPosition = 1 %}
+{% endif %}
+
+{% assign categoryIndex = explodedUrl | size | minus: categoryPosition %}
+{% assign category = explodedUrl[categoryIndex] %}
+{% assign subcategoryIndex = explodedUrl | size | minus: subcategoryPosition %}
+{% assign subcategory = explodedUrl[subcategoryIndex] %}
+
+{% assign categoryObj = site.data.categories | where: "uri", category | first %}
+{% assign subcategoryObj = categoryObj.subcategories | where: "uri", subcategory | first %}
+
+{% assign sortedContent = site[category] | where: "type", subcategory | sort: subcategoryObj.sortBy | reverse %}
+
+<!-- TODO: problem in yellow blooms and drones -->
+{% if sortedContent.size > 0 %}
+  <nav class="contents" data-scroll-speed="2">
+    <ul class="contents__list {% if page.layout == "content" %} scrolling-wrapper-flexbox {% endif %}">
+    {% for content in sortedContent %}
+      {% unless content.title contains page.title%}
+        <li class="contents__item">
+          <a href="{{ content.url }}">
+            <!-- TODO: Do I need those two divs? -->
+              <div class="{% if page.layout == "content" %} card {% endif %} img-preview2"
+                {% if page.layout != "content" %} style="background-image: url({% if content.thumbnail %} '{{content.thumbnail}}' {% endif %} {% if content.media[0].source == "image" %} '{{content.media[0].uid}}' {% endif %} {% if content.media[0].source == "youtube" %}'http://img.youtube.com/vi/{{ content.media[0].uid }}/{% if content.media[0].res %}{{content.media[0].res}}{% else %}maxresdefault{% endif %}.jpg'{% endif %});" {% endif %}">
+              <div class="inside {% if page.layout != "content" %}inside2{% endif %}">
+                <div>
+                  {{ content.title }}
+                </div>
+                  <div>
+                {% if subcategoryObj.sortBy == "tags" %}
+                    {{ content.tags | join: ", " }} 
+                    {% if content.dateFormat %}
+                     |
+                    {% endif %}
+                {% endif %}
+                {% if content.dateFormat %}
+                    {{ content.date | date: content.dateFormat }}
+                {% endif %}
+                  </div>
+                  <!-- <div> -->
+                  <!-- </div> -->
+              </div>
+            </div>
+          </a>
+        </li>
+      {% endunless %}
+    {% endfor %}
+    {% if page.layout == "content" %}
+      <li class="contents__item">
+        <a class="back-arrow" href="{{ site.baseUrl}}/{{ category }}/{{ subcategory }}">
+            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+        </a>
+      </li>
+    {% endif %}
+    </ul>
+  </nav>
+{% endif %}

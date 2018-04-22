@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+  <div class="container">
+      {% include header.html %}
+      {{ content }}
+      <!-- TODO: footer with small credits -->
+      <!-- <div class="footer"> -->
+      <!--   Website by <a href="https://github.com/erorhandler" target="_blank">Eror Handler</a>. -->
+      <!-- </div> -->
+  </div>
+  <div class="gap"></div>
+
+  <script src="{{ site.baseUrl }}/assets/js/main.js"></script>
+</body>
+
+</html>

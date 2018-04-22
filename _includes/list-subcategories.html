@@ -1,0 +1,18 @@
+{% assign explodedUrl = page.url | split: "/" %}
+{% assign categoryIndex = explodedUrl | size | minus: 2 %}
+{% assign category = explodedUrl[categoryIndex] %}
+{% assign categoryObj = site.data.categories | where: "uri", category | first %}
+
+<div data-spy="affix" data-offset-top="95">
+  <nav class="subcategories">
+    <ul class="subcategories__list">
+      {% for subcategory in categoryObj.subcategories %}
+        <li class="subcategories__item {% if (page.url contains subcategory.uri) %} subcategories__item--current {% endif %}">
+            <a href="{{ site.baseUrl }}/{{ category }}/{{ subcategory.uri}}" >
+              {{ subcategory.name }}
+            </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
