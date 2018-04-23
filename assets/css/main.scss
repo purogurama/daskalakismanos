@@ -4,9 +4,44 @@
 $color-bg-primary: #fafafa;
 $color-fg-primary: #000;
 $color-fg-secondary: #555;
-$color-fg-tetriary: #555;
-/* $color-fg-tetriary: #999; */
+$color-fg-tertiary: #555;
+// $color-fg-tertiary: #999;
 $font-primary: 'Raleway', sans-serif;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  wip ------------------------------------------------------------------------
+
+
 
 //  testing
 .inside div {
@@ -86,12 +121,16 @@ a:hover {
     /* a { */
         
     /* font-weight: bold; */
-    /*   color: $color-fg-tetriary; */
+    /*   color: $color-fg-tertiary; */
     /* } */
   }
 
+  &__item:last-child {
+      padding-right: 0;
+  }
+
   &__name {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 900;
     color: $color-fg-primary;
   }
@@ -102,8 +141,8 @@ a:hover {
 
 
   &__item--current {
-    border-left: 5px solid #222;
-    padding-left: 10px;
+    // border-left: 5px solid #222;
+    // padding-left: 10px;
 
     a {
       color: $color-fg-primary;
@@ -122,7 +161,7 @@ a:hover {
     margin-bottom: 20px;
 
     a {
-      color: $color-fg-tetriary;
+      color: $color-fg-tertiary;
       font-weight: bold;
     }
   }
@@ -202,7 +241,7 @@ a:hover {
     // margin-bottom: 20px;
 
     a {
-      color: $color-fg-tetriary;
+      color: $color-fg-tertiary;
       font-weight: bold;
     }
   }
@@ -324,7 +363,7 @@ p {
 }
 
 a {
-    color: #555;
+    color: $color-fg-secondary;
 }
 
 // .name {
