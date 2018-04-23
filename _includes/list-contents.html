@@ -50,7 +50,7 @@
     {% for content in sortedContent %}
       {% unless content.title contains page.title%}
         <li class="contents__item">
-          <a href="{{ site.baseUrl }}/{{ content.url }}">
+          <a href="{{ site.baseurl }}/{{ content.url }}">
             <!-- TODO: Do I need those two divs? -->
               <div class="{% if page.layout == "content" %} card {% endif %} img-preview2"
                 {% if page.layout != "content" %} style="background-image: url({% if content.thumbnail %} '{{content.thumbnail}}' {% endif %} {% if content.media[0].source == "image" %} '{{content.media[0].uid}}' {% endif %} {% if content.media[0].source == "youtube" %}'http://img.youtube.com/vi/{{ content.media[0].uid }}/{% if content.media[0].res %}{{content.media[0].res}}{% else %}maxresdefault{% endif %}.jpg'{% endif %});" {% endif %}">
@@ -79,7 +79,7 @@
     {% endfor %}
     {% if page.layout == "content" %}
       <li class="contents__item">
-        <a class="back-arrow" href="{{ site.baseUrl}}/{{ category }}/{{ subcategory }}">
+        <a class="back-arrow" href="{{ site.baseurl}}/{{ category }}/{{ subcategory }}">
             <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
         </a>
       </li>
