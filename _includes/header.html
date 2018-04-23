@@ -1,12 +1,12 @@
 <nav class="header">
   <ul class="header__list">
     <li class="header__item">
-      <a href="{{ site.baseUrl }}/" class="header__name">{{ site.author }}</a>
+      <a href="{{ site.baseurl }}/" class="header__name">{{ site.author }}</a>
     </li>
     <div class="header__menu">
       {% for category in site.data.categories %}
         <li class="header__item {% if (page.url contains category.uri) %} header__item--current {% endif %}">
-          <a href="{{ site.baseUrl }}/{{ category.uri }}/{{ category.subcategories[0].uri}}">
+          <a href="{{ site.baseurl }}/{{ category.uri }}/{{ category.subcategories[0].uri}}">
             {{ category.name }}
           </a>
         </li>
