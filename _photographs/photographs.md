@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Index
 description:
 media:
@@ -122,22 +121,3 @@ media:
       - uid: daskalakismanos/urban/23
       - uid: daskalakismanos/urban/24
 ---
-
-<div class="row">
-  <div class="col-xs-12">
-<center>
-          {% for image in page.media[0].images %}
-              <a href="http://res.cloudinary.com/dc5qotzae/image/upload/{{image.uid}}" class="gallery-demo" data-caption="{{image.caption}}">
-                  <div class="col-xs-3 img-preview" style="background-image: url('http://res.cloudinary.com/dc5qotzae/image/upload/w_100,h_100,c_crop/v1/{{image.uid}}');"></div>
-                  <!-- <div class="col-xs-3 img-preview" style="background-image: url('{{ site.baseurl }}{{ image.path }}');"></div> -->
-              </a>
-              <!-- <a href="http://imgsv.imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-140mmf_35-56g_ed_vr/img/sample/sample1_l.jpg" class="gallery-demo"> -->
-                <!-- <img src="http://imgsv.imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-140mmf_35-56g_ed_vr/img/sample/sample1_l.jpg"> -->
-              <!-- <div class="col-md-3 img-preview" style="background-image: url('http://imgsv.imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-140mmf_35-56g_ed_vr/img/sample/sample1_l.jpg');"> -->
-              <!-- </div> -->
-              <!-- </a> -->
-          {% endfor %}
-</center>
-  </div>
-</div>
-

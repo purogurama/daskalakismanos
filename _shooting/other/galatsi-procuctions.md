@@ -1,5 +1,5 @@
 ---
-title: Galatsi Production
+title: Galatsi Productions
 description:
 externalLink:
   url: https://www.youtube.com/user/galatsiproduction/videos

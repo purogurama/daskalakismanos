@@ -29,14 +29,5 @@
       uri:  the-drones
 - name: Photographs
   uri:  photographs
-  subcategories:
-    - name: Islands
-      uri:  islands
-    - name: Sounds & Spirits
-      uri:  sounds-and-spirits
-    - name: Scenes
-      uri:  scenes
-    - name: Urban
-      uri:  urban
 - name: Bio
   uri:  bio
