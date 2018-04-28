@@ -6,7 +6,7 @@
     <div class="header__menu">
       {% for category in site.data.categories %}
         <li class="header__item {% if (page.url contains category.uri) %} header__item--current {% endif %}">
-          <a href="{{ site.baseurl }}/{{ category.uri }}/{{ category.subcategories[0].uri}}">
+          <a href="{{ site.baseurl }}/{{ category.uri }}/{{ category.subcategories[0].uri }}">
             {{ category.name }}
           </a>
         </li>

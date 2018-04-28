@@ -14,6 +14,9 @@ body {
   background-color: $color-bg-primary;
 }
 
+.container {
+  max-width: 730px;
+}
 
 .header {
   margin-bottom: 40px;
@@ -56,6 +59,10 @@ body {
 }
 
 
+.home-img {
+    width: 90% !important;
+    margin: 0 auto;
+}
 
 
 
@@ -121,9 +128,6 @@ body {
 }
 
 
-.container {
-  max-width: 830px;
-}
 
 a:hover {
   color: $color-fg-primary !important;

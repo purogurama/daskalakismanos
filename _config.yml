@@ -1,10 +1,11 @@
 markdown: kramdown
-baseurl: /daskalakismanos
+baseurl: 
 
 permalink: pretty
 exclude: ['README.md']
 
 author: Daskalakis Manos
+author_email: manosdaskalakis@protonmail.com
 description: Personal site of filmaker Daskalakis Manos.
 
 sass:
@@ -24,19 +25,11 @@ defaults:
       type: music
     values:
       layout: content
-  - scope:
-      path: ""
-      type: photographs
-    values:
-      layout: content
 
 collections:
   shooting:
     output: true
     permalink: /:collection/:path/
   music:
-    output: true
-    permalink: /:collection/:path/
-  photographs:
     output: true
     permalink: /:collection/:path/
