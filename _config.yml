@@ -7,6 +7,10 @@ author: Daskalakis Manos
 author_email: manosdaskalakis@protonmail.com
 description: Personal site of filmaker Daskalakis Manos.
 
+cloudinary_url: https://res.cloudinary.com/dc5qotzae/image/upload/
+cloudinary_folder: daskalakismanos/
+cloudinary_crop: w_100,h_100,c_crop/
+
 sass:
   style: compressed
 
