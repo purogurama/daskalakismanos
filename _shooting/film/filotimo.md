@@ -3,7 +3,7 @@ title: Filotimo
 description: 
 media:
   - source: image
-    uid: http://res.cloudinary.com/dc5qotzae/image/upload/daskalakismanos/scenes/filotimo
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/daskalakismanos/scenes/filotimo
 tags: 
   - Comedy
   - Mystery

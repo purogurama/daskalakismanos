@@ -3,7 +3,7 @@ title: Broadcasting Live Video
 description:
 media:
   - source: image
-    uid: http://res.cloudinary.com/dc5qotzae/image/upload/daskalakismanos/misc/six-dogs
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/daskalakismanos/misc/six-dogs
   - source: images
     images:
       - uid: daskalakismanos/misc/barrett
