@@ -53,7 +53,7 @@
           <a href="{{ site.baseurl }}{{ content.url }}">
             <!-- TODO: Do I need those two divs? -->
               <div class="{% if page.layout == "content" %} card {% endif %} img-preview2"
-                {% if page.layout != "content" %} style="background-image: url({% if content.thumbnail %} '{{content.thumbnail}}' {% endif %} {% if content.media[0].source == "image" %} '{{content.media[0].uid}}' {% endif %} {% if content.media[0].source == "youtube" %}'http://img.youtube.com/vi/{{ content.media[0].uid }}/{% if content.media[0].res %}{{content.media[0].res}}{% else %}maxresdefault{% endif %}.jpg'{% endif %});" {% endif %}">
+                {% if page.layout != "content" %} style="background-image: url({% if content.thumbnail %} '{{content.thumbnail}}' {% endif %} {% if content.media[0].source == "image" %} '{{content.media[0].uid}}' {% endif %} {% if content.media[0].source == "youtube" %}'https://img.youtube.com/vi/{{ content.media[0].uid }}/{% if content.media[0].res %}{{content.media[0].res}}{% else %}maxresdefault{% endif %}.jpg'{% endif %});" {% endif %}">
               <div class="inside {% if page.layout != "content" %}inside2{% endif %}">
                 <div>
                   {{ content.title }}
