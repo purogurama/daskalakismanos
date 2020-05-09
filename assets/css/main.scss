@@ -215,7 +215,8 @@ a:hover {
 
 
   &__title {
-    font-size: 1.6em;
+    /* font-size: 1.6em; */
+    font-size: 1.4em;
     font-weight: bold;
     margin-bottom: 10px;
   }
@@ -537,4 +538,9 @@ ul {
 
 .bio a {
     padding-left: 5px;
+}
+
+.under {
+  color: #777;
+  font-size: 0.9em;
 }

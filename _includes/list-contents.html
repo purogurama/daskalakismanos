@@ -2,7 +2,7 @@
 
 {% if page.layout == "content" %}
   {% assign categoryPosition = 3 %}
-  {% assign subcategoryPosition = 2 %}
+    {% assign subcategoryPosition = 2 %}
   <div class="content-info" data-spy="affix" data-offset-top="95">
     <div class="content-info__body" >
       <div class="content-info__title">
@@ -12,6 +12,9 @@
         {% if page.dateFormat %}
         <div>
           {{ page.date | date: page.dateFormat }}
+            {% if page.dateFinish %}
+                - {{ page.dateFinish | date: page.dateFormat }}
+            {% endif %}
         </div>
         {% endif %}
         {% if page.tags %}
@@ -58,7 +61,7 @@
                 <div>
                   {{ content.title }}
                 </div>
-                  <div>
+                  <div class="under">
                 {% if subcategoryObj.sortBy == "tags" %}
                     {{ content.tags | join: ", " }} 
                     {% if content.dateFormat %}
@@ -67,6 +70,9 @@
                 {% endif %}
                 {% if content.dateFormat %}
                     {{ content.date | date: content.dateFormat }}
+                    {% if content.dateFinish %}
+                        - {{ content.dateFinish | date: content.dateFormat }}
+                    {% endif %}
                 {% endif %}
                   </div>
                   <!-- <div> -->

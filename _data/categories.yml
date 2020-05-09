@@ -1,21 +1,18 @@
 - name: Shooting
   uri:  shooting
   subcategories:
-    - name: Film
-      uri:  film
+    - name: Film / Doc
+      uri:  film-doc
       sortBy: date
-    - name: Television
-      uri:  television
-      sortBy: tags
-    - name: Documentary
-      uri:  documentary
+    - name: Television / Commercials
+      uri:  television-commercials
       sortBy: date
-    - name: Street Art
-      uri:  street-art
+    - name: Theatre / Art
+      uri:  theatre-art
       sortBy: date
-    - name: Other
-      uri:  other
-      sortBy: tags
+    - name: Showreels
+      uri:  showreels
+      sortBy: date
 - name: Music
   uri:  music
   subcategories:
@@ -27,7 +24,7 @@
       uri:  yellow-blooms
     - name: The Drones
       uri:  the-drones
-- name: Photographs
-  uri:  photographs
+#- name: Photographs
+#  uri:  photographs
 - name: Bio
   uri:  bio
