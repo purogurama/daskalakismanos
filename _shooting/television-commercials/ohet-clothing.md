@@ -1,5 +1,5 @@
 ---
-title: Ohet Clothing Commersials
+title: Ohet Clothing Commercials
 description: 
 externalLink:
   url: https://www.facebook.com/ohetclothing/
