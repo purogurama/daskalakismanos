@@ -6,7 +6,7 @@ externalLink:
   text: Go to official site
 media:
   - source: image
-    uid: https://s.tvopen.gr/resources/images/341a074e-10b6-4cc5-a457-2273efb3e1dd.jpg
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/v1613307767/daskalakismanos/misc/celebrity-travel.jpg
 tags: 
   - TV Show
 date: 2018-01-01

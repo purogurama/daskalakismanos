@@ -6,7 +6,7 @@ externalLink:
   text: Go to official site
 media:
   - source: image
-    uid: https://ant1media.azureedge.net/imgHandler/1245/b8657f01-7492-4e83-99a1-af63a173fefc.jpg
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/v1613306108/daskalakismanos/misc/crime-and-passion.jpg
 tags: 
   - Series
 date: 2018-01-01

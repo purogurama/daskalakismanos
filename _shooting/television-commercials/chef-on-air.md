@@ -6,7 +6,7 @@ externalLink:
   text: Go to official site
 media:
   - source: image
-    uid: https://chefonair.gr/wp-content/uploads/Chef_%CF%83%CF%84%CE%BF%CE%BD_%CE%91%CE%AD%CF%81%CE%B1-860-a-1-1200x798.jpg
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/v1613306093/daskalakismanos/misc/chef-on-air.jpg
 tags: 
   - Cooking
 date: 2015-01-01

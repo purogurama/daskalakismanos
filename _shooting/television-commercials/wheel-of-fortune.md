@@ -6,7 +6,7 @@ externalLink:
   text: Go to official site
 media:
   - source: image
-    uid: https://www.star.gr/tv/images/GalleryItem/files/Troxos_1920x1004c_19-20.jpg
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/v1613306093/daskalakismanos/misc/wheel-of-fortune.jpg
 tags: 
   - Game show
 date: 2016-01-01

@@ -6,7 +6,7 @@ externalLink:
   text: Go to official site
 media:
   - source: image
-    uid: http://img.antenna.gr/images/bda98feb-1926-4019-a759-a0f65cb727bd.jpg
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/v1613306108/daskalakismanos/misc/min-psaroneis.jpg
 tags: 
   - Series
 date: 2019-01-01

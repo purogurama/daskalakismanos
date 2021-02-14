@@ -1,12 +1,12 @@
 ---
-title: Goodmorning Greece
+title: Good Morning Greece
 description: 
 externalLink:
   url: https://www.antenna.gr/kalimeraellada
   text: Go to official site
 media:
   - source: image
-    uid: http://img.antenna.gr/images/3f8d971e-0bc1-4ca4-8b97-3124b035e9b6.jpg
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/v1613306093/daskalakismanos/misc/good-morning-greece.jpg
 tags: 
   - News program
 date: 2016-01-01

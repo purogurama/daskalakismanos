@@ -6,7 +6,7 @@ externalLink:
   text: Go to official site
 media:
   - source: image
-    uid: http://img.antenna.gr/images/a0f2f1ee-ef60-458b-9434-4f127778af3e.jpg
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/v1613306108/daskalakismanos/misc/the-return.jpg
 tags: 
   - Series
 date: 2018-01-01

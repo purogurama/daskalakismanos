@@ -6,7 +6,7 @@ externalLink:
   text: Go to official site
 media:
   - source: image
-    uid: https://www.grand-forest.gr/_storageWeb_/n/4858509018562/b/692055490556/drz-2139z.jpeg
+    uid: https://res.cloudinary.com/dc5qotzae/image/upload/v1613306108/daskalakismanos/misc/grand-forest-metsovo.jpg
 tags: 
   - Commercial
 date: 2019-01-01
