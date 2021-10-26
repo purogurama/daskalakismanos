@@ -18,6 +18,11 @@ body {
   max-width: 730px;
 }
 
+
+.card .inside {
+    width: 200px;
+}
+
 .header {
   margin-bottom: 40px;
 
@@ -94,6 +99,8 @@ body {
 
 
 //  testing
+
+
 .inside div {
     // padding-left: 10px;
 }
@@ -209,7 +216,7 @@ a:hover {
     background: $color-bg-primary;
     /* width: -webkit-fill-available; */
     /* z-index: 9999999; */
-    width: 250px;
+    width: 200px;
   }
 
 
@@ -522,6 +529,13 @@ ul {
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.card .inside {
+    width: max-content;
+}
+
+.content-info__body {
 }
 
 }
